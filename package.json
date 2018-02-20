@@ -1,0 +1,29 @@
+{
+  "name": "nozama",
+  "version": "1.0.0",
+  "description": "The project description",
+  "main": "index.js",
+  "engines": {
+    "node": "^9.4.0",
+    "npm": "^5.6"
+  },
+  "scripts": {
+    "test": "mocha tests --recursive --exit",
+    "user-test": "mocha user/tests --exit",
+    "start": "nodemon index.js",
+    "server-dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrsf87-nozama/nozama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrsf87-nozama/nozama/issues"
+  },
+  "homepage": "https://github.com/hrsf87-nozama/nozama#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
