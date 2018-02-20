@@ -1,4 +1,5 @@
 const prompt = require('prompt');
+const colors = require('colors')
 
 class Game {
     constructor() {
@@ -28,7 +29,8 @@ class Game {
 
     __init__() {
         console.clear();
-        console.log('Game started: \n' +
+        console.log(colors.cyan('Game Start! \n'));
+        console.log(
             ' 1 | 2 | 3 \n' +
             ' --------- \n' +
             ' 4 | 5 | 6 \n' +
@@ -82,10 +84,11 @@ class Game {
 
     playTurn() {
         let self = this;
-        console.log('Your turn player: ' + self.player);
+        prompt.message = 'Now Playing => ' + self.player;
+        prompt.delimiter = '\n';
         prompt.start();
-        prompt.get(['position'], function (err, result) {
-            self.position = result.position;
+        prompt.get(['Move'], function (err, result) {
+            self.position = result.Move;
             if (self.validateMove() === true) {
                 self.markBoard();
                 self.printBoard();
