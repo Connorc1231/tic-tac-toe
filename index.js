@@ -1,5 +1,5 @@
 const prompt = require('prompt');
-const colors = require('colors')
+const colors = require('colors');
 
 class Game {
     constructor() {
@@ -23,7 +23,8 @@ class Game {
             [2, 5, 8], 
             [3, 6, 9], 
             [1, 5, 9], 
-            [3, 5, 7]];
+            [3, 5, 7]
+        ];
         this.__init__();
     }
 
@@ -50,8 +51,8 @@ class Game {
             ' ---------\n' +
             ' ' + this.board[4] + ' | ' + this.board[5] + ' | ' + this.board[6] + '\n' +
             ' ---------\n' +
-            ' ' + this.board[7] + ' | ' + this.board[8] + ' | ' + this.board[9] + '\n');
-
+            ' ' + this.board[7] + ' | ' + this.board[8] + ' | ' + this.board[9] + '\n'
+        );
     }
 
     isInt() {
@@ -101,10 +102,10 @@ class Game {
                     self.playTurn();
                 } else {
                     self.player = 'X';
-                    self.playTurn('X');
+                    self.playTurn();
                 }
             } else {
-                console.log('incorrect input please try again...');
+                console.log('Incorrect input please try again...');
                 self.playTurn(self.player);
             }
         });
